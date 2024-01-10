@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Normal;
+    src: url(./Fonts/Helvetica.ttf);
+}
+@font-face {
+    font-family: Normal-light;
+    src: url(./Fonts/helvetica-light-587ebe5a59211.ttf);
+}
+@font-face {
+    font-family: Normal-bold;
+    src: url(./Fonts/Helvetica-Bold.ttf);
+}
+*{
+    font-family: Normal;
+}
+body{
+    font-size: 15.4px;
+    background: rgb(77,77,77);
+    background: linear-gradient(90deg, rgb(94, 94, 94) 0%, rgb(119, 119, 119) 54%, rgb(162, 162, 162) 100%);
+}
+nav{
+    font-size: 16px;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+}
+nav ul li a:hover{  
+    color: white;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 10%;
+    left: 0;
+    background-color: #dcdcdc;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+.ul-text{
+    padding-top: 6px;
+    font-family: light;
+}
+.bg{
+    background-color: rgb(77, 77, 77);
+}
+.div-pos{
+    margin-left: 17%;
+}
+.wrap {
+ overflow: hidden;
+ position: relative;
+}
+  
+.div-bg {
+ opacity: 0.13;
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: auto;
+}
+  
+.content {
+ position: relative;
+}
+section{
+    margin-top: 3.8%;
+}
+.icon-class i{
+    font-size: 300%;
+    color: black;
+    filter: opacity(100%);
+}
+nav ul li:nth-child(7){
+    letter-spacing: 2px;
+}
+section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 5%;
+    padding-top: 1.5%;
+}
+section ul li{
+    padding-left: 5%;
+}
+section ul li a{ 
+    color: white;
+    font-family: Normal;
+    text-decoration: none;
+}
+section ul li.active-link a{
+    text-decoration: underline;
+    color: black;
+}
+section ul li:nth-child(2){
+    font-size: 26px;
+}
+.div-text{
+    color: white;
+    font-size: 370px;
+    filter: opacity(50%);
+    font-weight: 900;
+    padding-top: 7%;
+    left: -6%;
+    padding-left: 0%;
+}
+.Carousel{
+    margin-top: 10%;
+}
+.wrap .Carousel-img-1{
+    transform: rotate(-9deg);
+}
+.inner-text{
+    margin-bottom: 20%;
+    margin-left: 10%;
+}
+.inner-text h1{
+    font-size: 116px;
+    color: white;
+}
+.inner-text h4{
+    font-size: 52px;
+    color: white;
+}
+.inner-text p{
+    color: white;
+    word-spacing: 5px;
+    font-size: 16px;
+}
+.Carousel-img-1:hover{
+    animation-name: Watch;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+}
+.Carousel-img-1{
+    animation-name: reverse;
+    animation-duration: 0.5s;
+}
+
+@keyframes Watch{
+    from {
+        transform: translateY(0px)rotate(-9deg);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@keyframes reverse{
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(0px)rotate(-9deg);
+    }
+}
